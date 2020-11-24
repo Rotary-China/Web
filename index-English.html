@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--<![endif]-->
+	<!-- BEGIN HEAD -->
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Rotary China</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="" name="description" />
+		<meta content="" name="author" />
+		<!-- BEGIN GLOBAL MANDATORY STYLES -->
+		<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<!-- BEGIN THEME LAYOUT STYLES -->
+		<link href="assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+		<link href="assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
+		<!-- END THEME LAYOUT STYLES -->
+		<link rel="shortcut icon" href="img/Logo-Man.jpg" />
+		<style type="text/css">
+			.E-logo-Img {
+				width: 200px;
+			}
+			
+			#E-loading {
+				width: 100%;
+				overflow: hidden;
+			}
+			/*公告弹幕*/
+			
+			#E-notice {
+				width: 300px;
+				/*单行显示，超出隐藏*/
+				height: 35px;
+				/*固定公告栏显示区域的高度*/
+				padding: 0 30px;
+				/*background-color: #b3effe;*/
+				overflow: hidden;
+				position: relative;
+				white-space: nowrap;
+				overflow: hidden;
+				top: 5px;
+				cursor: pointer;
+			}
+			
+			#E-noticeList {
+				position: absolute;
+				top: 8px;
+				height: 20px;
+			}
+			
+			#E-noticeList>span {
+				padding: 15px;
+				height: 20px;
+				color: #dc0f9d;
+			}
+			
+			.E-footerImg {
+				width: 100%;
+			}
+			.E-language{
+				background: #48525E;
+				border-color: #a2abb7;
+				outline: none;
+			}
+		</style>
+	</head>
+	<!-- END HEAD -->
+
+	<body class="page-container-bg-solid">
+		<!-- BEGIN HEADER -->
+		<div class="page-header">
+			<!-- BEGIN HEADER TOP -->
+			<div class="page-header-top">
+				<div class="container">
+					<!-- BEGIN LOGO -->
+					<div class="page-logo">
+						<a href="index.html">
+							<!--<img src="assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">-->
+							<img class="E-logo-Img" src="img/logo.png" />
+						</a>
+					</div>
+					<!-- END LOGO -->
+					<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+					<a href="javascript:;" class="menu-toggler"></a>
+					<!-- END RESPONSIVE MENU TOGGLER -->
+					<!-- BEGIN TOP NAVIGATION MENU -->
+					<div class="top-menu">
+
+						<ul class="nav navbar-nav pull-right">
+							<!--<li class="dropdown dropdown-extended dropdown-tasks dropdown-dark">
+								<h4>消息公告：</h4>
+							</li>-->
+
+							<li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="listsMes">
+								<!--消息弹幕-->
+								<div id="E-notice">
+									<div id="E-noticeList">
+										<span>Welcome to Rotary China！扶轮中国感谢您的支持！</span>
+									</div>
+								</div>
+							</li>
+							<li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" style="float: right;margin-left: 50px;">
+								<!--语言-->
+					
+					<button type="button" class="btn btn-default" id="language">中 文</button>
+					<button type="button" class="btn btn-default" id="English">English</button>
+							</li>
+							<!-- BEGIN NOTIFICATION DROPDOWN -->
+							<!-- END TODO DROPDOWN -->
+							<!-- END QUICK SIDEBAR TOGGLER -->
+						</ul>
+					</div>
+					<!-- END TOP NAVIGATION MENU -->
+				</div>
+			</div>
+			<!-- END HEADER TOP -->
+			<!-- BEGIN HEADER MENU -->
+			<div class="page-header-menu">
+				<div class="container"style="width: 100%;">
+					<!-- BEGIN HEADER SEARCH BOX -->
+					<!--<form class="search-form" action="page_general_search.html" method="GET">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" name="query">
+							<span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+						</div>
+					</form>-->
+
+					<div class="hor-menu  ">
+						<ul class="nav navbar-nav">
+							<li class="menu-dropdown classic-menu-dropdown active">
+								<a href="index-English.html" id="E-Home-page"> Home Page
+									<span class="arrow"></span>
+								</a>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;"> Rotary International
+									<span class="arrow"></span>
+								</a>
+								<ul class="dropdown-menu pull-left">
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RC-intro">
+											<i class="fa fa-bars"></i> Introduction of Rotary International President
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RC-history">
+											<i class="fa fa-calendar-check-o"></i> History of Rotary International </a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RC-annals">
+											<i class="fa fa-bar-chart"></i> Rotary International Annual Report
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RC-Services-Available">
+											<i class="icon-folder"></i> Rotary International Service Projects
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;"> The Rotary Foundation
+									<span class="arrow"></span>
+								</a>
+								<ul class="dropdown-menu pull-left">
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RFI-history">
+											<i class="fa fa-calendar-check-o"></i> Introduction to Rotary Foundation
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RFI-intro">
+											<i class="fa fa-bars"></i> Introduction to President of the Rotary Foundation </a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;" id="Rotary-wheel-History"> Rotary China
+									<span class="arrow"></span>
+								</a>
+								<ul class="dropdown-menu pull-left">
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RC-History">
+											<i class="fa fa-calendar-check-o"></i> The History of Rotary China from 1919 to 1951
+											<span class="font-sm">1919-1951</span>
+										</a>
+									</li>
+									 <li class="dropdown-submenu">
+                                        <a href="javascript:;" class="nav-link nav-toggle"onclick="openEShow()">
+                                            <i class="icon-folder"></i> Rotary China Service Projects
+                                            <span class="arrow"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class=" ">
+                                                <a href="javascript:;" class="nav-link"style="padding-left: 35px;" id="E-RC-services"> Rotary China Service Projects </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+										<a href="javascript:;" class="nav-link" id="E-RC-42Year">
+											<i class="fa fa-newspaper-o"></i> 42-Years of Rotary China At A Glance </a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;" id="E-Famous-rotarians"> Famous Rotarians
+									<span class="arrow"></span>
+								</a>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;" id="Rotary-Information"> Facts About Rotary
+									<span class="arrow"></span>
+								</a>
+								<ul class="dropdown-menu pull-left">
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RK-rotary">
+											<i class="fa fa-question-circle"></i> What is Rotary
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RiName-Why">
+											<i class="fa fa-question-circle"></i> The origin of the name Rotary
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-DOit-Man">
+											<i class="fa fa fa-group"></i> People of Action
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RK-test">
+											<i class="fa fa-qrcode"></i> The Four-Way Test
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RK-areas">
+											<i class="fa fa-recycle"></i> Our Causes – Seven Areas of Focus </a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;" id="Rotary-Information"> Rotary Fellowship
+									<span class="arrow"></span>
+								</a>
+								<ul class="dropdown-menu pull-left">
+									<li>
+										<a href="javascript:;" class="nav-link" id="E-RotaryFellowship">
+											<i class="fa fa-users"></i> Rotary Golf Fellowship
+										</a>
+									</li>
+									
+								</ul>
+							</li>
+							<li class="menu-dropdown mega-menu-dropdown">
+								<a href="javascript:;" id="E-scroll_bottom"> Contact Us
+									<span class="arrow"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- END MEGA MENU -->
+				</div>
+			</div>
+			<!-- END HEADER MENU -->
+		</div>
+		<!-- END HEADER -->
+		<!-- BEGIN CONTAINER -->
+		<div class="page-container">
+			<!-- BEGIN CONTENT -->
+			<div class="page-content-wrapper">
+				<div class="page-content-inner">
+					<div id="E-loading">
+
+					</div>
+				</div>
+			</div>
+			<!-- END CONTENT -->
+			<!-- BEGIN QUICK SIDEBAR -->
+			<a href="javascript:;" class="page-quick-sidebar-toggler">
+				<i class="icon-login"></i>
+			</a>
+			<!-- END QUICK SIDEBAR -->
+		</div>
+		<!-- END CONTAINER -->
+		<!-- BEGIN FOOTER -->
+		<!-- BEGIN PRE-FOOTER -->
+		<div class="page-prefooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+						<img class="E-footerImg" src="img/logo2.png" />
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 footer-block"style="padding-top: 35px;">
+						<h2>About us</h2>
+						<p style="text-indent: 0em;"> Our Mission - We provide service to others, promote integrity, and advance world understanding, goodwill, and peace through our fellowship of business, professional, and community leaders.</p>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 footer-block"style="padding-top: 35px;">
+						<h2>Contact us</h2>
+						<address class="margin-bottom-40"> 
+							 Email:
+                            <a href="info@rotarychina.org">info@rotarychina.org</a>
+                        </address>
+					</div>
+					<!--<div class="col-md-3 col-sm-6 col-xs-12 footer-block"style="padding-top: 35px;">
+						<h2>Language</h2>
+						<select name="" class="E-language">
+							<option value="1">English</option>
+							<option value="0">中文</option>
+						</select>
+					</div>-->
+					<!--<div class="col-md-3 col-sm-6 col-xs12 footer-block">
+						<h2>Subscribe Email</h2>
+						<div class="subscribe-form">
+							<form action="javascript:;">
+								<div class="input-group">
+									<input type="text" placeholder="mail@email.com" class="form-control">
+									<span class="input-group-btn">
+                                        <button class="btn" type="submit">Submit</button>
+                                    </span>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+						<h2>Follow Us On</h2>
+						<ul class="social-icons">
+							<li>
+								<a href="javascript:;" data-original-title="rss" class="rss"></a>
+							</li>
+							<li>
+								<a href="javascript:;" data-original-title="facebook" class="facebook"></a>
+							</li>
+							<li>
+								<a href="javascript:;" data-original-title="twitter" class="twitter"></a>
+							</li>
+							<li>
+								<a href="javascript:;" data-original-title="googleplus" class="googleplus"></a>
+							</li>
+							<li>
+								<a href="javascript:;" data-original-title="linkedin" class="linkedin"></a>
+							</li>
+							<li>
+								<a href="javascript:;" data-original-title="youtube" class="youtube"></a>
+							</li>
+							<li>
+								<a href="javascript:;" data-original-title="vimeo" class="vimeo"></a>
+							</li>
+						</ul>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+		<!-- END PRE-FOOTER -->
+		<!-- BEGIN INNER FOOTER -->
+		<div class="scroll-to-top">
+			<i class="icon-arrow-up"></i>
+		</div>
+		<!-- BEGIN CORE PLUGINS -->
+		<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+		<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<!-- END CORE PLUGINS -->
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<!-- BEGIN PAGE LEVEL SCRIPTS -->
+		<script type="text/javascript">
+			//公告弹幕	
+			$.fn.textScroll = function() {
+				var p = $(this),
+					c = p.children(),
+					speed = 3000; //值越大速度越小
+				var cw = c.width(),
+					pw = p.width();
+				var t = (cw / 100) * speed;
+				var f = null,
+					t1 = 0;
+
+				function ani(tm) {
+					counttime();
+					c.animate({
+						left: -cw
+					}, tm, "linear", function() {
+						c.css({
+							left: pw
+						});
+						clearInterval(f);
+						t1 = 0;
+						t = ((cw + pw) / 100) * speed;
+						ani(t);
+					});
+				}
+
+				function counttime() {
+					f = setInterval(function() {
+						t1 += 10;
+					}, 10);
+				}
+				p.on({
+					mouseenter: function() {
+						c.stop(false, false);
+						clearInterval(f);
+						console.log(t1);
+					},
+					mouseleave: function() {
+						ani(t - t1);
+						console.log(t1);
+					}
+				});
+				ani(t);
+			}
+			$(function() {
+				$("#E-notice").textScroll(); //aaa为最外层div的Id  也可写Class  如：$(".aaa") 此处aaa为class名
+			});
+//首页加载
+			$(document).ready(function() {
+				$("#E-Home-page").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/E-Home-Page.html");
+					layer.close(index);
+				});
+				$("#E-Home-page").trigger("click");
+				
+				
+				//一、国际扶轮模块
+				//1.现任社长简介
+				$("#E-RC-intro").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-Club/E-RC-intro.html");
+					layer.close(index);
+				});
+				//2.国际扶轮历史
+				$("#E-RC-history").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-Club/E-RC-history.html");
+					layer.close(index);
+				});
+				//3.国际扶轮年报
+				$("#E-RC-annals").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-Club/E-RC-annals.html");
+					layer.close(index);
+				});
+				//4.国际扶轮服务项目
+				$("#E-RC-Services-Available").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-Club/E-RC-Services-Available.html");
+					layer.close(index);
+				});
+				
+				//二、国际扶轮基金会
+				//1.国际扶轮基金会简介
+				$("#E-RFI-history").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-foundation-international/E-RFI-FoundationIntro.html");
+					layer.close(index);
+				});
+				//2.国际扶轮基金会主席简介
+				$("#E-RFI-intro").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-foundation-international/E-RFI-ChairmanIntro.html");
+					layer.close(index);
+				});
+				//三、扶轮中国
+				//1.扶轮中国历史1949-1951
+				$("#E-RC-History").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-China/E-RC-History.html");
+					layer.close(index);
+				});
+				//2.扶轮中国现状1951-至今
+				$("#E-RC-actuality").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-China/E-RC-actuality.html");
+					layer.close(index);
+				});
+				//3.我们的服务项目
+				$("#E-RC-services").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-China/E-RC-services.html");
+					layer.close(index);
+				});
+				//4.扶轮中国42年项目一览
+				$("#E-RC-42Year").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-China/E-RC-42Year.html");
+					layer.close(index);
+				});
+			    //四、著名扶轮社友
+			    $("#E-Famous-rotarians").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/E-Famous-rotarians.html");
+					layer.close(index);
+				});
+			    //五、扶轮知识
+			    //1.何为扶轮
+			    $("#E-RK-rotary").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-knowledge/E-RK-rotary.html");
+					layer.close(index);
+				});
+				//2.“扶轮”名称的由来
+			    $("#E-RiName-Why").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-knowledge/E-RiName-Why.html");
+					layer.close(index);
+				});
+			    //3.采取行动的扶轮人
+			    $("#E-DOit-Man").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-knowledge/E-DOit-Man.html");
+					layer.close(index);
+				});
+			    //4.四大考验
+			    $("#E-RK-test").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-knowledge/E-RK-test.html");
+					layer.close(index);
+				});
+			    //5.六大领域
+			    $("#E-RK-areas").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/Rotary-knowledge/E-RK-areas.html");
+					layer.close(index);
+				});
+				//六.扶轮联谊
+			    $("#E-RotaryFellowship").click(function() {
+					var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+					$("#E-loading").load("English/RotaryFellowship/RotaryFellowship.html");
+					layer.close(index);
+				});
+			});
+			//页面滚动到底部
+			$('#E-scroll_bottom').click(function(){
+				var index = layer.load(1, {
+						shade: [0.7, '#000'] //0.1透明度的白色背景
+					});
+				$('html,body').animate({scrollTop:$(document).height()-$(window).height()}, 10);
+				layer.close(index);
+			});
+		
+		$("#language").click(function(){
+			window.location.href = "index.html";
+		})
+		$("#English").click(function(){
+			window.location.href = "index-English.html";
+		})
+		function openEShow(){
+			$("#E-RC-services").parent().parent().show();
+		}
+		</script>
+	</body>
+
+</html>
